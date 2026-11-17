@@ -48,7 +48,8 @@ models.sequelize.query("SELECT * FROM Users WHERE email = :email AND password = 
  - 사용자별 장바구니 접근 권한 검증이 충분하지 않은 것으로 판단
 
 ### 3.2 Root Cause
- - 장바구니 조회 요청에서 요청 대상의 객체 ID만으로 데이터에 접근할 수 있었으나, 요청한 사용자가 해당 객체의 소유자인지 서버 측에서 검증 과정이 충분하지 않은 것으로 분석
+ - 장바구니 조회 요청에서 객체 ID를 변경 시 다른 사용자의 데이터가 반환되는 현상 확인
+ - 서버 측 객체 소유권 검증이 적절하게 적용되지 않았을 가능성 확인
 
 ### 3.3 Recommended Remediation
  - 개선 방안 권고
