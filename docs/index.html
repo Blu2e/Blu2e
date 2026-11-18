@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>JANG WONJAE | RED TEAM</title>
+    <meta name="description" content="Jang Wonjae - Red Team Portfolio, Security Research and Penetration Testing">
+    <meta name="theme-color" content="#080808">
+
+    <title>JANG WONJAE | RED TEAM PORTFOLIO</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div class="logo">JANG_WONJAE</div>
+    <header class="header">
+        <a href="#home" class="logo">JANG_WONJAE</a>
 
-        <nav>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav" id="mainNav">
             <a href="#home">HOME</a>
             <a href="#about">ABOUT</a>
             <a href="#projects">PROJECTS</a>
@@ -25,13 +32,11 @@
     </header>
 
 
-    <!-- MAIN -->
     <main>
 
-        <section id="home">
+        <section id="home" class="hero">
 
-            <!-- HERO CONTENT -->
-            <div class="hero-content">
+            <div class="hero-content reveal">
 
                 <p class="eyebrow">
                     RED TEAM // SECURITY RESEARCH & PENETRATION TESTING
@@ -43,16 +48,25 @@
                 </h1>
 
                 <p class="hero-description">
-                    Understand the system.
-                    Find the weakness.
+                    Understand the system.<br>
+                    Find the weakness.<br>
                     Verify the impact.
                 </p>
 
+                <a href="#projects" class="hero-button">
+                    EXPLORE MY WORK ↘
+                </a>
+
             </div>
 
+            <div class="radar reveal">
 
-            <!-- RADAR HUD -->
-            <div class="radar">
+                <span class="radar-label top">
+                    PORTFOLIO / RED TEAM
+                </span>
+
+                <div class="radar-cross horizontal"></div>
+                <div class="radar-cross vertical"></div>
 
                 <div class="radar-circle">
 
@@ -61,17 +75,10 @@
 
                 </div>
 
-                <div class="radar-cross horizontal"></div>
-                <div class="radar-cross vertical"></div>
-
                 <span class="radar-point point-one"></span>
                 <span class="radar-point point-two"></span>
                 <span class="radar-point point-three"></span>
                 <span class="radar-point point-four"></span>
-
-                <span class="radar-label top">
-                    PORTFOLIO / RED TEAM
-                </span>
 
                 <span class="radar-label bottom">
                     SEOUL, KR // 2026
@@ -79,9 +86,10 @@
 
             </div>
 
-
-            <!-- FEATURED PROJECT -->
-            <div class="featured-project">
+            <a
+                href="#projects"
+                class="featured-project reveal"
+            >
 
                 <div class="project-info">
 
@@ -95,28 +103,519 @@
                         Vulnerability Analysis · BOLA · SQL Injection
                     </p>
 
-                    <a href="#projects" class="project-link">
+                    <span class="project-link">
                         EXPLORE PROJECT ↗
-                    </a>
+                    </span>
 
                 </div>
 
                 <div class="project-index">
-
                     <span>01</span>
                     <span>WEB SECURITY</span>
                     <span>SECURITY ASSESSMENT</span>
+                </div>
+
+            </a>
+
+        </section>
+
+        <section id="about" class="section about-section">
+
+            <div class="section-heading reveal">
+
+                <p class="section-label">01 / ABOUT ME</p>
+
+                <h2>
+                    WHO <span>I AM.</span>
+                </h2>
+
+                <p>
+                    Vulnerability Analysis · Penetration Testing · Continuous Learning
+                </p>
+
+            </div>
+
+
+            <div class="about-layout">
+
+                <div class="about-main reveal">
+
+                    <p class="about-greeting">
+                        HELLO, I'M JANG WONJAE.
+                    </p>
+
+                    <h3>
+                        이해하고 분석하며,<br>
+                        실제 영향까지 검증하는<br>
+                        보안 전문가를 목표로 합니다.
+                    </h3>
+
+                    <p class="about-description">
+                        안녕하세요. 보안 분야에서 전문성을 쌓아가고 있는 장원재입니다.
+                    </p>
+
+                    <p class="about-description">
+                        취약점 분석(Vulnerability Analysis)과
+                        침투 테스트(Penetration Testing) 두 분야를 함께 탐구하며,
+                        장기적으로 Red Team Specialist로 성장하는 것을 목표로 하고 있습니다.
+                    </p>
+
+                    <p class="about-description">
+                        단순히 취약점을 발견하는 것에 그치지 않고,
+                        취약점이 발생하는 원인을 분석하고 허가된 환경에서
+                        실제 영향을 검증하며 대응 방안과 개선 결과까지
+                        이해하는 것을 중요하게 생각합니다.
+                    </p>
+
+                    <p class="about-description">
+                        아직 배워야 할 것이 많지만 하나씩 직접 실습하고 분석하며
+                        그 과정을 기록하고 있습니다.
+                    </p>
 
                 </div>
 
+
+                <div class="about-side reveal">
+
+                    <div class="identity-card">
+
+                        <span class="identity-number">IDENTITY / 001</span>
+
+                        <div class="identity-symbol">
+                            <span>JW</span>
+                        </div>
+
+                        <h3>JANG WONJAE</h3>
+
+                        <p>ASPIRING RED TEAM SPECIALIST</p>
+
+                        <div class="identity-line"></div>
+
+                        <span class="identity-location">
+                            SEOUL, SOUTH KOREA
+                        </span>
+
+                    </div>
+
+
+                    <div class="career-card">
+
+                        <p class="card-label">CAREER DIRECTION</p>
+
+                        <h3>RED TEAM</h3>
+
+                        <p>
+                            Vulnerability Discovery<br>
+                            Security Analysis<br>
+                            Authorized Penetration Testing
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="technical-section reveal">
+
+                <p class="section-label">TECHNICAL BACKGROUND</p>
+
+                <div class="technical-grid">
+
+                    <div class="technical-item">
+                        <span class="technical-index">01</span>
+                        <h3>OPERATING SYSTEM</h3>
+                        <p>Linux · Kali Linux · Ubuntu</p>
+                    </div>
+
+                    <div class="technical-item">
+                        <span class="technical-index">02</span>
+                        <h3>SECURITY TOOLS</h3>
+                        <p>Nmap · Wireshark · Burp Suite</p>
+                    </div>
+
+                    <div class="technical-item">
+                        <span class="technical-index">03</span>
+                        <h3>PROGRAMMING</h3>
+                        <p>Python · Git · GitHub</p>
+                    </div>
+
+                    <div class="technical-item">
+                        <span class="technical-index">04</span>
+                        <h3>ENVIRONMENT</h3>
+                        <p>Docker · VirtualBox</p>
+                    </div>
+
+                </div>
+
+                <p class="technical-note">
+                    Tools and technologies are listed according to current learning and practical experience.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section id="projects" class="section projects-section">
+
+            <div class="section-heading reveal">
+
+                <p class="section-label">02 / PROJECT DIRECTORY</p>
+
+                <h2>
+                    SELECTED <span>PROJECTS.</span>
+                </h2>
+
+                <p>
+                    Practical exercises, vulnerability analysis and development projects.
+                </p>
+
+            </div>
+
+            <article class="project-card reveal">
+
+                <div class="project-card-top">
+
+                    <span class="project-category">
+                        WEB SECURITY / 001
+                    </span>
+
+                    <span class="project-status">
+                        COMPLETED
+                    </span>
+
+                </div>
+
+                <div class="project-card-content">
+
+                    <div class="project-main-info">
+
+                        <h3>OWASP JUICE SHOP</h3>
+
+                        <p class="project-subtitle">
+                            WEB APPLICATION SECURITY ASSESSMENT
+                        </p>
+
+                        <p class="project-text">
+                            OWASP Juice Shop 실습 환경에서 인증 동작,
+                            접근 제어 및 입력값 검증 영역을 분석했습니다.
+                            BOLA와 SQL Injection을 재현하고
+                            SQL Injection에 대한 개선 및 재검증을 수행했습니다.
+                        </p>
+
+                        <div class="tag-list">
+                            <span>BOLA</span>
+                            <span>SQL INJECTION</span>
+                            <span>AUTHENTICATION</span>
+                            <span>BURP SUITE</span>
+                        </div>
+
+                        <a
+                            href="https://github.com/Blu2e/blu2e.github.io/tree/main/projects/juice-shop"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="outline-button"
+                        >
+                            VIEW PROJECT ↗
+                        </a>
+
+                    </div>
+
+                    <div class="project-card-index">
+                        <span>01</span>
+                        <p>SECURITY<br>ASSESSMENT</p>
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="project-card reveal">
+
+                <div class="project-card-top">
+
+                    <span class="project-category">
+                        DEVELOPMENT / 002
+                    </span>
+
+                    <span class="project-status status-learning">
+                        ARCHIVED
+                    </span>
+
+                </div>
+
+                <div class="project-card-content">
+
+                    <div class="project-main-info">
+
+                        <h3>MYSTERY SHORTS</h3>
+
+                        <p class="project-subtitle">
+                            PYTHON PROJECT
+                        </p>
+
+                        <p class="project-text">
+                            Python을 활용해 인터넷 미스터리 사례를
+                            JSON 데이터로 관리하고 검증 결과를 확인하는
+                            대시보드 형태의 프로젝트를 제작했습니다.
+                            현재는 개발을 중단한 상태입니다.
+                        </p>
+
+                        <div class="tag-list">
+                            <span>PYTHON</span>
+                            <span>JSON</span>
+                            <span>DATA MANAGEMENT</span>
+                        </div>
+
+                        <span class="project-note">
+                            PROJECT DEVELOPMENT CURRENTLY ON HOLD
+                        </span>
+
+                    </div>
+
+                    <div class="project-card-index">
+                        <span>02</span>
+                        <p>PYTHON<br>DEVELOPMENT</p>
+                    </div>
+
+                </div>
+
+            </article>
+
+            <article class="project-card reveal">
+
+                <div class="project-card-top">
+
+                    <span class="project-category">
+                        WEB SECURITY / 003
+                    </span>
+
+                    <span class="project-status status-learning">
+                        LEARNING
+                    </span>
+
+                </div>
+
+                <div class="project-card-content">
+
+                    <div class="project-main-info">
+
+                        <h3>PORTSWIGGER ACADEMY</h3>
+
+                        <p class="project-subtitle">
+                            WEB SECURITY LEARNING
+                        </p>
+
+                        <p class="project-text">
+                            웹 어플리케이션 취약점의 원리와 공격 흐름을
+                            학습하고 실습 환경에서 요청과 응답을 분석하고 있습니다.
+                        </p>
+
+                        <div class="tag-list">
+                            <span>SQL INJECTION</span>
+                            <span>WEB SECURITY</span>
+                            <span>LAB PRACTICE</span>
+                        </div>
+
+                        <a
+                            href="https://portswigger.net/web-security"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="outline-button"
+                        >
+                            VIEW LEARNING RESOURCE ↗
+                        </a>
+
+                    </div>
+
+                    <div class="project-card-index">
+                        <span>03</span>
+                        <p>WEB SECURITY<br>LEARNING</p>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <section id="research" class="section research-section">
+
+            <div class="section-heading reveal">
+
+                <p class="section-label">03 / RESEARCH & LEARNING</p>
+
+                <h2>
+                    LEARN. <span>ANALYZE.</span>
+                </h2>
+
+                <p>
+                    Building technical knowledge through continuous practice.
+                </p>
+
+            </div>
+
+
+            <div class="research-grid">
+
+                <article class="research-card reveal">
+
+                    <span class="research-number">01 / NETWORK</span>
+
+                    <div class="research-symbol">🗲</div>
+
+                    <h3>NETWORK ANALYSIS</h3>
+
+                    <p>
+                        Nmap을 활용한 서비스 및 포트 확인,
+                        Wireshark를 활용한 패킷 흐름과 TCP 통신 분석을 학습했습니다.
+                    </p>
+
+                    <div class="tag-list">
+                        <span>NMAP</span>
+                        <span>WIRESHARK</span>
+                        <span>TCP/IP</span>
+                    </div>
+
+                </article>
+
+
+                <article class="research-card reveal">
+
+                    <span class="research-number">02 / WEB SECURITY</span>
+
+                    <div class="research-symbol">&lt;/&gt;</div>
+
+                    <h3>WEB SECURITY</h3>
+
+                    <p>
+                        HTTP 요청과 응답, 인증 및 접근 제어,
+                        SQL Injection 등 웹 어플리케이션 보안 개념을 학습하고 있습니다.
+                    </p>
+
+                    <div class="tag-list">
+                        <span>HTTP</span>
+                        <span>BURP SUITE</span>
+                        <span>SQL INJECTION</span>
+                    </div>
+
+                </article>
+
+
+                <article class="research-card reveal">
+
+                    <span class="research-number">03 / PROGRAMMING</span>
+
+                    <div class="research-symbol">{ }</div>
+
+                    <h3>PYTHON LEARNING</h3>
+
+                    <p>
+                        변수, 조건문, 반복문, 리스트와 문자열 처리 등
+                        Python 기초 문법을 학습하며 직접 코드를 작성하고 있습니다.
+                    </p>
+
+                    <div class="tag-list">
+                        <span>PYTHON</span>
+                        <span>PROBLEM SOLVING</span>
+                    </div>
+
+                </article>
+
+
+                <article class="research-card reveal">
+
+                    <span class="research-number">04 / SECURITY CONCEPTS</span>
+
+                    <div class="research-symbol">◈</div>
+
+                    <h3>SECURITY FUNDAMENTALS</h3>
+
+                    <p>
+                        Security by Design, Supply Chain Cybersecurity,
+                        인증과 권한 관리 등 보안 기본 개념을 공부하고 있습니다.
+                    </p>
+
+                    <div class="tag-list">
+                        <span>SECURITY BY DESIGN</span>
+                        <span>ACCESS CONTROL</span>
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="research-footer reveal">
+
+                <p>
+                    LEARNING IS A CONTINUOUS PROCESS.
+                </p>
+
+                <span>
+                    STUDY / PRACTICE / DOCUMENTATION
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <section id="contact" class="section contact-section">
+
+            <div class="contact-content reveal">
+
+                <p class="section-label">04 / CONTACT</p>
+
+                <h2>
+                    LET'S BUILD<br>
+                    <span>SECURITY.</span>
+                </h2>
+
+                <p>
+                    Interested in security research, collaboration
+                    and continuous learning.
+                </p>
+
+                <a
+                    href="https://github.com/Blu2e"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="contact-button"
+                >
+                    GITHUB PROFILE ↗
+                </a>
+
+            </div>
+
+            <div class="contact-mark reveal">
+                <span>JW</span>
+                <p>RED TEAM PORTFOLIO</p>
+                <p>SEOUL, SOUTH KOREA</p>
             </div>
 
         </section>
 
     </main>
 
+    <footer class="footer">
 
-    <!-- JAVASCRIPT -->
+        <div class="footer-logo">
+            JANG_WONJAE
+        </div>
+
+        <p>
+            SECURITY RESEARCH & PENETRATION TESTING
+        </p>
+
+        <span>
+            © 2026 JANG WONJAE. ALL RIGHTS RESERVED.
+        </span>
+
+    </footer>
+
+
     <script src="js/main.js"></script>
 
 </body>
