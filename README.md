@@ -1,7 +1,7 @@
 # RED TEAM | Security Research & Penetration Testing
 안녕하세요. 보안 분야에서 전문성을 쌓아가고 있는 장원재입니다.
 
-저는 **취약점 분석(Vulnerability Analysis)**과 **침투 테스트(Penetration Testing)** 두 분야를 함께 탐구하며, 장기적으로 Red Team Specialist로 성장하는 것을 목표로 하고 있습니다.
+저는 **취약점 분석(Vulnerability Analysis)** 과 **침투 테스트(Penetration Testing)** 두 분야를 함께 탐구하며, 장기적으로 Red Team Specialist로 성장하는 것을 목표로 하고 있습니다.
 
 단순히 취약점을 발견하는 것에 그치지 않고, 취약점이 발생하는 원인을 분석하고 허가된 환경에서 실제 영향을 검증하며 대응 방안과 개선 결과까지 이해하는 것을 중요하게 생각합니다.
 
