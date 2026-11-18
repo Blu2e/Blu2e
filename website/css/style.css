@@ -1,0 +1,584 @@
+
+/* =====================================
+   1. BASIC SETTINGS
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #080808;
+    color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+
+/* =====================================
+   2. HEADER
+===================================== */
+
+header {
+    width: 100%;
+    height: 76px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 5%;
+
+    background-color: #090909;
+    border-bottom: 1px solid #65152d;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    color: #b8b8b8;
+    text-decoration: none;
+
+    font-size: 13px;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff1744;
+}
+
+
+/* =====================================
+   3. MAIN HERO SECTION
+===================================== */
+
+main {
+    padding: 70px 7%;
+}
+
+#home {
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    align-items: center;
+    gap: 50px;
+
+    min-height: 650px;
+}
+
+
+/* HERO TEXT */
+
+.hero-content {
+    position: relative;
+}
+
+.eyebrow {
+    color: #ff1744;
+
+    font-size: 14px;
+    letter-spacing: 2px;
+
+    margin-bottom: 35px;
+}
+
+h1 {
+    font-size: clamp(55px, 8vw, 110px);
+
+    line-height: 0.95;
+    font-weight: 900;
+
+    letter-spacing: -4px;
+    font-style: italic;
+}
+
+h1 span {
+    color: #ff1744;
+}
+
+.hero-description {
+    margin-top: 35px;
+
+    color: #b8b8b8;
+
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 1.8;
+}
+
+
+/* =====================================
+   4. RADAR HUD
+===================================== */
+
+.radar {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 23, 68, 0.08) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 23, 68, 0.08) 1px,
+            transparent 1px
+        );
+
+    background-size: 30px 30px;
+}
+
+
+/* OUTER CIRCLE */
+
+.radar-circle {
+    position: relative;
+
+    width: 75%;
+    height: 75%;
+
+    border: 1px solid #ff1744;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+
+/* MIDDLE CIRCLE */
+
+.radar-circle::before {
+    content: "";
+
+    position: absolute;
+
+    width: 70%;
+    height: 70%;
+
+    border: 1px dashed #a81435;
+    border-radius: 50%;
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+/* INNER CIRCLE */
+
+.radar-circle::after {
+    content: "";
+
+    position: absolute;
+
+    width: 45%;
+    height: 45%;
+
+    border: 1px solid #ff1744;
+    border-radius: 50%;
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+
+/* CENTER POINT */
+
+.radar-center {
+    width: 10px;
+    height: 10px;
+
+    background-color: #ff1744;
+
+    transform: rotate(45deg);
+
+    z-index: 3;
+}
+
+
+/* =====================================
+   5. RADAR CROSSHAIR
+===================================== */
+
+.radar-cross {
+    position: absolute;
+
+    background-color: rgba(255, 23, 68, 0.5);
+
+    z-index: 2;
+    pointer-events: none;
+}
+
+.radar-cross.horizontal {
+    width: 100%;
+    height: 1px;
+}
+
+.radar-cross.vertical {
+    width: 1px;
+    height: 100%;
+}
+
+
+/* =====================================
+   6. RADAR SCAN ANIMATION
+===================================== */
+
+.radar-scan {
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 50%;
+
+    background: conic-gradient(
+        from 0deg,
+        transparent 0deg,
+        transparent 285deg,
+        rgba(255, 23, 68, 0.02) 310deg,
+        rgba(255, 23, 68, 0.25) 355deg,
+        rgba(255, 23, 68, 0.4) 360deg
+    );
+
+    animation: radar-rotate 5s linear infinite;
+
+    z-index: 1;
+    pointer-events: none;
+}
+
+
+/* SCAN BEAM */
+
+.radar-scan::after {
+    content: "";
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 50%;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        rgba(255, 23, 68, 0.9),
+        transparent
+    );
+
+    transform-origin: left center;
+}
+
+
+/* ROTATION */
+
+@keyframes radar-rotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =====================================
+   7. RADAR COORDINATES
+===================================== */
+
+.radar-point {
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    background: #ff1744;
+
+    transform: rotate(45deg);
+
+    box-shadow:
+        0 0 8px rgba(255, 23, 68, 0.8);
+
+    z-index: 3;
+}
+
+.point-one {
+    top: 30%;
+    left: 70%;
+}
+
+.point-two {
+    top: 65%;
+    left: 27%;
+}
+
+.point-three {
+    top: 48%;
+    left: 78%;
+}
+
+.point-four {
+    top: 20%;
+    left: 48%;
+}
+
+
+/* =====================================
+   8. RADAR LABELS
+===================================== */
+
+.radar-label {
+    position: absolute;
+
+    color: #ff1744;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    background-color: #080808;
+
+    padding: 5px;
+
+    z-index: 4;
+}
+
+.radar-label.top {
+    top: 10%;
+    left: 5%;
+}
+
+.radar-label.bottom {
+    bottom: 10%;
+    right: 5%;
+}
+
+
+/* =====================================
+   9. FEATURED PROJECT
+===================================== */
+
+.featured-project {
+    grid-column: 1 / -1;
+
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    padding: 30px 35px;
+    margin-top: 15px;
+
+    background: linear-gradient(
+        110deg,
+        #10090c,
+        #090909
+    );
+
+    border: 1px solid #8b1738;
+
+    transition: 0.3s ease;
+}
+
+
+/* CARD HOVER */
+
+.featured-project:hover {
+    border-color: #ff1744;
+
+    box-shadow:
+        0 0 20px rgba(255, 23, 68, 0.12);
+}
+
+
+/* PROJECT LABEL */
+
+.project-label {
+    color: #ff1744;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+
+/* PROJECT TITLE */
+
+.project-info h2 {
+    font-size: 30px;
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
+}
+
+
+/* PROJECT DESCRIPTION */
+
+.project-description {
+    color: #a8a8a8;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+/* PROJECT LINK */
+
+.project-link {
+    display: inline-block;
+
+    color: #ff1744;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    border: 1px solid #ff1744;
+
+    padding: 12px 20px;
+
+    transition: 0.3s;
+}
+
+.project-link:hover {
+    background-color: #ff1744;
+    color: #080808;
+}
+
+
+/* PROJECT INDEX */
+
+.project-index {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    color: #777;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.project-index span:first-child {
+    color: #ff1744;
+
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+/* =====================================
+   10. RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 900px) {
+
+    #home {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+        padding-top: 40px;
+    }
+
+    .radar {
+        max-width: 550px;
+        margin: 0 auto;
+    }
+
+    .featured-project {
+        grid-column: 1;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        height: auto;
+
+        flex-direction: column;
+        gap: 20px;
+
+        padding: 20px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    main {
+        padding: 40px 6%;
+    }
+
+    #home {
+        min-height: auto;
+    }
+
+    h1 {
+        font-size: clamp(43px, 12vw, 65px);
+        letter-spacing: -2px;
+    }
+
+    .eyebrow {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .featured-project {
+        padding: 25px 20px;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 30px;
+    }
+
+    .project-info h2 {
+        font-size: 23px;
+    }
+
+}
