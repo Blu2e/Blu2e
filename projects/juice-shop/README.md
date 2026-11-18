@@ -2,11 +2,11 @@
 
 ## 1. Project Overview
  - **Project :** OWASP Juice Shop Security Assessment
- - **Purpose :** 웹 애플리케이션의 보안 구조를 이해하고 취약점 분석 및 검증
+ - **Purpose :** 웹 어플리케이션의 보안 구조를 이해하고 취약점 분석 및 검증
  - **Target :** OWASP Juice Shop
  - **Status :** Initial Assessment Completed / BOLA Remediation Pending
 
- - 본 프로젝트는 OWASP Juice Shop 대상으로 웹 애플리케이션의 보안 구조와 취약점 분석하는 개인 실습 프로젝트
+ - 본 프로젝트는 OWASP Juice Shop 대상으로 웹 어플리케이션의 보안 구조와 취약점 분석하는 개인 실습 프로젝트
  - 단순한 취약점 탐색에 그치지 않고 HTTP 요청 및 응답 분석, 취약점 재현, 원인 분석, 보안 개선 방안 수립 및 수정 후 검증까지 수행 목표
 
 ## 2. Lab Environment
@@ -24,7 +24,7 @@
 
 ## 3. Project Objectives
  - HTTP Request / Response 분석
- - 웹 애플리케이션의 인증 구조 이해
+ - 웹 어플리케이션의 인증 구조 이해
  - 서비스 및 공격 표면 분석
  - 취약점 식별 및 안전한 환경에서 검증
  - 보안 개선 및 재검증
@@ -91,7 +91,7 @@
 ## 8. Lessons Learned
  - 이번 프로젝트를 통해 하기 내용을 학습 및 검증
 
- - HTTP 요청과 응답을 기반으로 웹 애플리케이션 동작 분석
+ - HTTP 요청과 응답을 기반으로 웹 어플리케이션 동작 분석
  - 사용자 인증과 객체 접근 권한의 차이 이해
  - 객체 ID 변경을 통한 접근 제어 검증
  - SQL Injection의 발생 원인 및 인증 우회 영향 분석

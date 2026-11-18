@@ -1,8 +1,8 @@
 # Lab Environment
 
 ## 1. Environment Overview
- - 본 프로젝트는 Oracle VirtualBox 기반 가상 환경에서 OWASP Juice Shop을 대상으로 웹 애플리케이션의 보안 구조와 취약점 분석 진행
- - Ubuntu VM을 테스트 대상으로 구성, Kali Linux VM에서 Firefox와 Burp Suite를 활용하여 웹 애플리케이션 요청 및 응답 분석
+ - 본 프로젝트는 Oracle VirtualBox 기반 가상 환경에서 OWASP Juice Shop을 대상으로 웹 어플리케이션의 보안 구조와 취약점 분석 진행
+ - Ubuntu VM을 테스트 대상으로 구성, Kali Linux VM에서 Firefox와 Burp Suite를 활용하여 웹 어플리케이션 요청 및 응답 분석
 
 ## 2. Lab Components
  - Virtualization: Oracle VirtualBox
@@ -26,12 +26,12 @@
  - Virtualization Platform: Oracle VirtualBox
 
 ## 5. Testing Tools
- - Firefox: 웹 애플리케이션 접속 및 기능 테스트
+ - Firefox: 웹 어플리케이션 접속 및 기능 테스트
  - Burp Suite Community Edition : HTTP Request / Response 가로채기 및 분석
 
 ## 6. Security Testing Scope
  - Target: 개인 가상 환경에 구축한 OWASP Juice Shop
- - Objective: 웹 애플리케이션 취약점 분석 및 검증
+ - Objective: 웹 어플리케이션 취약점 분석 및 검증
  - Scope: Authentication, Access Control, Input Validation
  - Methodology: 수동 HTTP 트래픽 분석 및 허가된 환경에서의 취약점 검증
 
